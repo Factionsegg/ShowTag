@@ -1,0 +1,4 @@
+<resources>
+
+    <style name="Theme.ShowTagTV" parent="@style/Theme.Leanback" />
+</resources>

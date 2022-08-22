@@ -1,0 +1,44 @@
+.MusicContainer {
+    position: absolute;
+}
+.musicImage{
+    border:solid 1px #ffffff;
+    width:100%;
+}
+.musicUrlButton {
+    font-size: 1.1vw;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.5vw;
+    min-width: 10vw;
+    padding: 0.5vw;
+    margin-top: 1vw;
+    /* margin: 0.8vw 0 0 0.8vw; */
+    background-color: rgba(0,0,0,.2);
+    border: solid 1px #fff;
+    border-radius: 0vw;
+    text-align: center;
+    cursor: pointer;
+    pointer-events: initial;
+    color: #ffffff;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-transform: uppercase;
+}
+
+    .musicUrlButton a:visited, .musicUrlButton a:link, .musicUrlButton a:active {
+        text-decoration: none;
+        color: #ffffff;
+        background-color: transparent;
+        text-transform: uppercase;
+    }
+
+.musicUrlName{
+
+}
+.musicUrlText{
+
+}

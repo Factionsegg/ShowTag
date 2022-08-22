@@ -1,0 +1,33 @@
+﻿<html>
+
+<head>
+
+
+</head>
+
+<body>
+
+    <div id="videoContainer" style="width:500px;"></div>
+
+<script>
+
+var config = {
+    "studio": true,
+    "designer": true,
+    "url": "https://tag2081.showtagenabled.com/programs/legobatman001-2081/legobatman001-2081.mp4",
+    "videoId": "legobatman001-2081",
+    "width": "1200px",
+    "idUser": "testuser"
+}
+
+var x = document.createElement('iframe');
+x.setAttribute("id", "videoWrapper");
+x.setAttribute("srcdoc", '<video data-config='+ JSON.stringify(config) +' id="my-player"></video><script src="JS/1.0.0.js"><\/script>');
+document.getElementById('videoContainer').appendChild(x);
+
+</script>
+
+    <!-- <script id="myScript" src="JS/test.1.0.0.js" data-my_var_1=config></script> -->
+</body>
+
+</html>

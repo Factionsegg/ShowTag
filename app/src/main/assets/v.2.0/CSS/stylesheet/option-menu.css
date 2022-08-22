@@ -1,0 +1,658 @@
+﻿/* IMPORTANT: COMMENT WHEN NOT USED */
+/* These elements are connected to the plugin and reload the background if the background would be an animated image (Animated PNG/Animated GIF)
+for the highest quality we recommend to use Animated PNG */
+
+:root {
+    --buttonContainerBackground:img/button_menu_final.png;
+    --buttonContainerBackground-url: url(img/button_menu_final.png);
+    --scrollContainerBackgroundCelebrity:img/menu_celebrities.png;
+    --scrollContainerBackgroundCelebrity-url: url(img/menu_celebrities.png);
+    --scrollContainerBackgroundCustomCelebrity:img/menu_celebrities.png; 
+    --scrollContainerBackgroundCustomCelebrity-url: url(img/menu_celebrities.png);
+    --scrollContainerBackgroundCelebrityVideoOverview:img/menu_celebrities.png;
+    --scrollContainerBackgroundCelebrityVideoOverview-url: url(img/menu_celebrities.png);
+    --celebrityVideoOverviewPlayer:img/celebrity_video_player.png;
+    --celebrityVideoOverviewPlayer-url: url(img/celebrity_video_player.png);
+}
+
+
+/* APPLIES TO ALL BUTTONS */
+
+.ButtonContainer {
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right:0px;
+    background-image: var(--buttonContainerBackground-url);
+    background-repeat: no-repeat;
+    pointer-events: none;
+    background-size: contain;
+}
+
+#ButtonContainer {
+
+}
+
+#minimizeButtonContainer{
+
+}
+
+.minimizeButtonContainer{
+    /* width: 6vw;
+    height: 2vw;
+    bottom: 2vw;
+    left: 2vw;
+    border: solid 1px #ffffff;
+    background-color: #0000003d;
+    pointer-events: initial; */
+    width: 4vw;
+    height: 4vw;
+    bottom: 2vw;
+    left: 5vw;
+    pointer-events: initial;
+    background-image: url("img/button_up.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1000;
+}
+
+    .minimizeButtonContainer:hover{
+        background-image: url("img/button_down.png");
+        cursor: pointer;
+    }
+
+    .minimizeButtonContainer #minimizeText{
+        /* font-size: 1vw;
+        color: #ffffff;
+        padding: 0.4vw;
+        text-align: center; */
+        display: none;
+    }
+    .minimizeButtonContainer::before{
+        content: "";
+        width: 18vw;
+        height: 19vw;
+        bottom: 0vw;
+        margin-bottom: -2vw;
+        margin-left: -5vw;
+        pointer-events: none;
+        position: absolute;
+        background-image: url(img/batman_bubble.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+
+.defaultMenuButton {
+    font-size: 2vw;
+    font-family: 'lego';
+    line-height: 3.5vw;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 0px 0px #dba80a;
+    color: #5c5c5c;
+    min-width: 13vw;
+    background: rgb(44 44 44);
+    border-radius: 0vw;
+    cursor: pointer;
+    width: 16vw;
+    height: 3.5vw;
+    box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px, rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px, rgb(0 0 0 / 9%) 0px -3px 5px, inset 0 0 10px #000000;
+}
+
+.defaultMenuLoader {
+    width: 1.5vw;
+    height: 1.5vw;
+    background-color: darkgray;
+    float: right;
+    margin-top: 0.75vw;
+    margin-right: 0.5vw;
+    opacity: 0.5;
+    border-radius: 50%;
+}
+
+.defaultMenuExtra{
+
+}
+
+/* BUTTON SPECIFIC WITH LEVELS */
+
+#ButtonProduct {
+
+}
+    #ButtonProduct div{
+
+    }
+    #ButtonProduct #ButtonProductLoader{
+
+    }
+    #ButtonProduct .defaultMenuExtra {
+
+    }
+
+    @keyframes slide-in-left-celebrity {
+        0% {
+            margin-left: -300px;
+            opacity: 0
+        }
+        75%{margin-left: -300px;
+            opacity: 0}
+        100% {
+            opacity: 1
+        }
+    }
+
+#ButtonCelebrity {
+    margin-top: 10vw;
+    margin-left: 4vw;
+    animation: slide-in-left-celebrity 1.5s ease-out;
+
+
+}
+    #ButtonCelebrity div{
+
+    }
+    #ButtonCelebrity #ButtonCelebrityLoader {
+
+    }
+    #ButtonCelebrity .defaultMenuExtra {
+
+    }
+
+    @keyframes slide-in-left-celebrity-custom {
+        0% {
+            margin-left: -300px;
+            opacity: 0
+        }
+        85%{margin-left: -300px;
+            opacity: 0}
+        100% {
+            opacity: 1
+        }
+    }
+
+#ButtonCustomCelebrity {
+    margin-top: 1vw; /*RELATIVE TO THE #BUTTON CELEBRITY*/
+    margin-left: 4vw;
+    animation: slide-in-left-celebrity-custom 1.5s ease-out;
+
+}
+    #ButtonCelebrity div{
+
+    }
+    #ButtonCelebrity #ButtonCelebrityLoader {
+
+    }
+    #ButtonCelebrity .defaultMenuExtra {
+
+    }
+
+
+#ButtonCustomProduct {
+
+}
+    #ButtonCustomProduct div{
+
+    }
+    #ButtonCustomProduct #ButtonCustomProductLoader{
+
+    }
+    #ButtonCustomProduct .defaultMenuExtra {
+
+    }
+
+/* CELEBRITY VIDEO OVERVIEW */
+
+#ButtonCelebrityVideoOverview{
+    margin-top: 1vw; /*RELATIVE TO THE #BUTTON CELEBRITY*/
+    margin-left: 4vw;
+    animation: slide-in-left-celebrity-custom 1.5s ease-out;
+}
+
+/* CELEBRITY VIDEO OVERVIEW*/
+#CelebrityVideoOverview{
+    /* from the button click in the main menu*/
+}
+
+
+
+
+
+
+
+#ButtonLivePoll {
+
+}
+    #ButtonLivePoll div{
+
+    }
+    #ButtonLivePoll #ButtonLivePollLoader {
+
+    }
+    #ButtonLivePoll #ButtonLivePollExtra {
+
+    }
+    #ButtonLivePoll .defaultMenuExtra {
+
+    }
+
+
+#ButtonMusic {
+
+}
+    #ButtonMusic div{
+
+    }
+    #ButtonMusic #ButtonMusicLoader {
+
+    }
+    #ButtonMusic .defaultMenuExtra {
+
+    }
+
+
+#ButtonFavorites {
+
+}
+
+    #ButtonFavorites div {
+    }
+
+    #ButtonFavorites #ButtonFavoritesLoader {
+    }
+
+    #ButtonFavorites .defaultMenuExtra {
+    }
+
+
+/* DIRECT PURCHASE BUTTON */
+
+.MenuShoppingListButton {
+    width: 89.3vw;
+    left: -1vw;
+    font-size: 1.3vw;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    color: #ffffff;
+    line-height: 3vw;
+    padding: 0 0.1vw;
+    margin: 0.8vw 0 0 0.8vw;
+    background-color: rgba(0, 0, 0, .4);
+    border: solid 1px #fff;
+    border-radius: 0vw;
+    text-align: center;
+    cursor: pointer;
+}
+
+    .MenuShoppingListButton a:visited,
+    .MenuShoppingListButton a:link,
+    .MenuShoppingListButton a:active {
+        color: #ffffff;
+    }
+
+/* ACTIVE BUTTONS */
+#activeButtonContainer {
+    margin-left: 16.4vw;
+    position: absolute;
+    bottom: 3.8vw;
+}
+
+#activeMenuButton01 { /* EMBEDDED IN THE ButtonContainer*/
+    min-width: 2vw;
+    width: 3.5vw;
+    background-image: url('img/LEGO_logo_150.png');
+    background-repeat: no-repeat;
+    pointer-events: none;
+    background-size: contain;
+}
+
+    #activeMenuButton01 .activeButtonTitle {
+        display: none;
+    }
+
+    #activeMenuButton01 .defaultMenuExtra {
+    }
+
+
+#activeMenuButton02 {
+}
+
+    #activeMenuButton02 .activeButtonTitle {
+    }
+
+    #activeMenuButton02 .defaultMenuExtra {
+    }
+
+
+#activeMenuButton03 {
+}
+
+    #activeMenuButton03 .activeButtonTitle {
+    }
+
+    #activeMenuButton03 .defaultMenuExtra {
+    }
+
+
+#activeMenuButton04 {
+}
+
+    #activeMenuButton04 .activeButtonTitle {
+    }
+
+    #activeMenuButton04 .defaultMenuExtra {
+    }
+
+
+#activeMenuButton05 {
+}
+
+    #activeMenuButton05 .activeButtonTitle {
+    }
+
+    #activeMenuButton05 .defaultMenuExtra {
+    }
+
+
+
+/* MENU SROLL SECTION */
+
+.MenuContainer {
+    top: 0vw;
+    bottom: 0vw;
+    border-radius: 0vw;
+    padding-left: 0.5vw;
+    width: 100%;
+    pointer-events: none;
+}
+
+.MenuContainerScroll {
+    overflow: hidden;
+    overflow-y: scroll;
+    width: 12vw;
+    height: 22.5vw;
+    margin-top: 6vw;
+    right: 2.3vw;
+    float: right;
+    animation: slide-in-right-scrollmenu 1.5s ease-out;
+    border-radius: 15%; /* soften the edge */
+}
+
+
+@keyframes slide-in-right-scrollmenu {
+    0% {
+        margin-right: -300px;
+        opacity: 0
+    }
+    75%{margin-right: -300px;
+        opacity: 0}
+    100% {
+        opacity: 1
+    }
+}
+
+    .MenuContainerScroll::-webkit-scrollbar {
+        width: 6px;
+        height: 1vw;
+    }
+
+    .MenuContainerScroll::-webkit-scrollbar-button {
+        width: 0px;
+        height: 0px;
+    }
+
+    .MenuContainerScroll::-webkit-scrollbar-thumb {
+        background: #e1e1e1;
+        border: 12px none #ffffff;
+        border-radius: 65px;
+    }
+
+        .MenuContainerScroll::-webkit-scrollbar-thumb:hover {
+            background: #ffffff;
+        }
+
+        .MenuContainerScroll::-webkit-scrollbar-thumb:active {
+            background: #808080;
+        }
+
+    .MenuContainerScroll::-webkit-scrollbar-track {
+        background: #666666;
+        border: 0px none #ffffff;
+        border-radius: 65px;
+    }
+
+        .MenuContainerScroll::-webkit-scrollbar-track:hover {
+            background: #666666;
+        }
+
+        .MenuContainerScroll::-webkit-scrollbar-track:active {
+            background: #333333;
+        }
+
+    .MenuContainerScroll::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+
+    /* SCROLL FOR CELEBRITY SPECIFIC*/
+    #CelebrityMenuContainer {
+        background-image: var(--scrollContainerBackgroundCelebrity-url);
+        background-repeat: no-repeat;
+        pointer-events: none;
+        background-size: contain;
+    }
+
+    #CelebrityCustomMenuContainer {
+        background-image: var(--scrollContainerBackgroundCustomCelebrity-url);
+        background-repeat: no-repeat;
+        pointer-events: none;
+        background-size: contain;
+    }
+
+    /* CELEBRITY VIDEO OVERVIEW*/
+    #CelebrityVideoOverview{
+        /* from the button click in the main menu*/
+    }
+
+    #CelebrityVideoOverviewContainer{
+        background-image: var(--scrollContainerBackgroundCelebrityVideoOverview-url);
+        background-repeat: no-repeat;
+        pointer-events: none;
+        background-size: contain;
+    }
+
+    #CelebrityVideoOverviewContainer .MenuContainerScroll{
+        border-radius: 0%;
+    }
+
+    #CelebrityVideoOverviewContainer .CelebrityVideoName{
+        background: #000000;
+        margin-top: -4vw;
+        padding: 5px;
+    }
+
+
+
+/* CELL ITEMS, APPLIES TO ALL CELLS */
+
+.MenuCellBackground {
+    height: 11.5vw;
+    width: 8.7vw;
+    position: absolute;
+    /* background-color: #ffffff; */
+    overflow: hidden;
+}
+
+    /* create the circle behind the image so they don't float*/
+    .MenuCellBackground::after{
+        content: "";
+        background: rgba(0, 0, 0, 0.4);
+        border-radius: 50%;
+        width: 8.7vw;
+        height: 2vw;
+        position: absolute;
+        z-index: 100;
+        left: 0vw;
+        top: 7.5vw;
+    }
+
+    /* overrule due to image dimensions*/
+    #celebrityScroll_59993{ /* harley quinn */
+        margin-top: 2vw;
+        margin-bottom: 1vw;
+    }
+
+    #celebrityScroll_59995{ /* poison ivy */
+        margin-top: 1vw;
+        margin-bottom: 1vw;
+    }
+
+    #celebrityScroll_59997{ /* riddler */
+        margin-top: 1vw;
+    }
+
+.MenuCellBackground img {
+    width: 100%;
+    position: relative;
+    z-index: 100000;
+}
+
+
+.MenuCellName {  
+    width: 8.7vw;
+    height: 2vw;
+    font-family: 'lego';
+    margin-top: 7.8vw;
+    font-size: 1.1vw;
+    line-height: 1.4vw;
+    z-index: 1000000;
+    white-space: normal;
+    padding: 0.3vw;
+    text-transform: uppercase;
+}
+
+
+
+
+/* SPECIFIC CELL ITEMS */
+
+.MenuCellContainerCelebrities {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding-right: 0.3vw;
+    text-decoration: none;
+    width: 9vw;
+    height: 9.5vw;
+    cursor: pointer;
+}
+
+    .MenuCellContainerCelebrities .MenuCellBackground {
+    }
+
+    .MenuCellContainerCelebrities .MenuCellBackground img {
+    }
+
+    .MenuCellContainerCelebrities .MenuCellName {
+    }
+
+
+.MenuCellContainerProducts {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding-right: 0.3vw;
+    text-decoration: none;
+    width: 9vw;
+    height: 12.5vw;
+    cursor: pointer;
+}
+
+    .MenuCellContainerProducts .MenuCellBackground {
+    }
+
+    .MenuCellContainerProducts .MenuCellBackground img {
+    }
+
+    .MenuCellContainerProducts .MenuCellName {
+    }
+
+
+.MenuCellContainerCustomProducts {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding-right: 0.3vw;
+    text-decoration: none;
+    width: 9vw;
+    height: 12.5vw;
+    cursor: pointer;
+}
+
+    .MenuCellContainerCustomProducts .MenuCellBackground {
+    }
+
+    .MenuCellContainerCustomProducts .MenuCellBackground img {
+    }
+
+    .MenuCellContainerCustomProducts .MenuCellName {
+    }
+
+.MenuCellContainerMusic {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding-right: 0.3vw;
+    text-decoration: none;
+    width: 9vw;
+    height: 15.5vw;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+}
+
+    .MenuCellContainerMusic .MenuCellBackground {
+    }
+
+    .MenuCellContainerMusic .MenuCellBackground img {
+    }
+
+    .MenuCellContainerMusic .MenuCellName {
+        margin-top: 9.2vw;
+        height: initial;
+        width: 9vw;
+        font-size: 1vw;
+        line-height: 1vw;
+    }
+
+    .MenuCellContainerMusic .MenuCellSong {
+    }
+
+
+.MenuCellMusicUrlContainer {
+    margin-top: 12.2vw;
+    margin-bottom: 1vw;
+    height: initial;
+    width: 9vw;
+    font-size: 1vw;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 0.2vw;
+    padding-bottom: 0.5vw;
+    border: solid 1px transparent;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+}
+    .MenuCellMusicUrlContainer:hover {
+        border: solid 1px #ffffff;
+    }
+
+    .MenuCellMusicUrlContainer .MenuCellMusicUrlName{
+    }
+
+    .MenuCellMusicUrlContainer .MenuCellMusicUrl {
+    }
+
+    .MenuCellMusicUrlContainer a:visited,
+    .MenuCellMusicUrlContainer a:link,
+    .MenuCellMusicUrlContainer a:active {
+        color: #ffffff;
+    }
+

@@ -1,0 +1,93 @@
+﻿
+/* PROGRAM INFORMATION OPTION */
+
+.ProgramInformationContainer {
+    margin-left: 0vw;
+    margin-top: 0vw;
+    width: 52vw;
+}
+
+    .ProgramLogo {
+        width:44vw;
+        margin-left: 1.5vw;
+    }
+
+    .ProgramName {
+        font-size: 5vw;
+        margin-top: 5vw;
+        margin-left: 1.5vw;
+    }
+
+    .ProgramDataContainer {
+        margin-left: 2vw;
+        height: 3vw;
+        font-size: 1.5vw;
+    }
+        .ProgramYear {
+            float: left;
+            margin-right: 2vw;
+            padding-top: 0.3vw;
+        }
+        .ProgramAge {
+            float: left;
+            margin-right: 2vw;
+            padding: 0.3vw;
+            border-radius: 5px;
+            background-color: #3a3a3a;
+        }
+        .ProgramDuration {
+            float: left;
+            margin-right: 2vw;
+            padding-top: 0.3vw;
+        }
+        .ProgramQuality {
+            float: left;
+            border: solid 1px #ffffff;
+            padding: 0.3vw;
+            border-radius: 5px;
+            margin-right: 2vw;
+        }
+        .ProgramEpisode {
+            float: left;
+            margin-right: 2vw;
+            padding-top: 0.3vw;
+        }
+
+        .ProgramTitle {
+            margin-left: 2vw;
+            font-size: 1.5vw;
+            line-height: 1.5;
+            font-weight: bold;
+        }
+
+    .ProgramDescription {
+        font-size: 1.5vw;
+        line-height: 1.5;
+        margin-left: 2vw;
+    }
+
+.ProgramDurationContainer {
+    width: 20vw;
+    margin-left: 2vw;
+    margin-top: 1vw;
+    border: solid 1px #ffffff;
+}
+
+.ProgramRunningTime {
+    background-color: White;
+    height: 1vw;
+    margin: 0.5vw;
+}
+
+/* SKIP SECTION */
+
+.skipContainer {
+    left: 3vw;
+    bottom: 4vw;
+    border: solid 1px #ffffff;
+    border-radius: 5px;
+    font-size: 1.5vw;
+    text-align: center;
+    padding: 1vw;
+    cursor:pointer;
+}
