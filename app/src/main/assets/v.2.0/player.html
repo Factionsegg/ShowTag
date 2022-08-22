@@ -5,7 +5,7 @@
 
 </head>
 
-<body>
+<body  style="margin:0px;" >
 
     <div id="videoContainer" style="width:500px;"></div>
 
@@ -24,6 +24,13 @@ var x = document.createElement('iframe');
 x.setAttribute("id", "videoWrapper");
 x.setAttribute("srcdoc", '<video data-config='+ JSON.stringify(config) +' id="my-player"></video><script src="JS/1.0.0.js"><\/script>');
 document.getElementById('videoContainer').appendChild(x);
+
+window.onload = function() {
+   let doc = x.contentDocument;
+   doc.body.innerHTML = doc.body.innerHTML + `<style>body{
+    margin:0px;
+} </style>`;
+}
 
 </script>
 
