@@ -2,12 +2,16 @@
 
 <head>
 
-
+    <style>
+    iframe {
+        height: 550px !important;
+    }
+</style>
 </head>
 
 <body  style="margin:0px;" >
 
-    <div id="videoContainer" style="width:500px;"></div>
+<div id="videoContainer" style="width:00px;"></div>
 
 <script>
 
@@ -16,17 +20,19 @@ var config = {
     "designer": true,
     "url": "https://tag2081.showtagenabled.com/programs/legobatman001-2081/legobatman001-2081.mp4",
     "videoId": "legobatman001-2081",
-    "width": "1200px",
+    "width": "960px",
     "idUser": "testuser"
 }
 
 var x = document.createElement('iframe');
+x.setAttribute("style", "background-color: #ff0000;");
 x.setAttribute("id", "videoWrapper");
-x.setAttribute("srcdoc", '<video data-config='+ JSON.stringify(config) +' id="my-player"></video><script src="JS/1.0.0.js"><\/script>');
+x.setAttribute("srcdoc", '<video style="height:550px;" data-config='+ JSON.stringify(config) +' id="my-player"></video><script src="JS/1.0.0.js"><\/script>');
 document.getElementById('videoContainer').appendChild(x);
 
 window.onload = function() {
    let doc = x.contentDocument;
+
    doc.body.innerHTML = doc.body.innerHTML + `<style>body{
     margin:0px;
 } </style>`;
@@ -34,7 +40,7 @@ window.onload = function() {
 
 </script>
 
-    <!-- <script id="myScript" src="JS/test.1.0.0.js" data-my_var_1=config></script> -->
+<!-- <script id="myScript" src="JS/test.1.0.0.js" data-my_var_1=config></script> -->
 </body>
 
 </html>
