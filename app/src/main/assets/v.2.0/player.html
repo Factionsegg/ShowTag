@@ -25,7 +25,6 @@ var config = {
 }
 
 var x = document.createElement('iframe');
-x.setAttribute("style", "background-color: #ff0000;");
 x.setAttribute("id", "videoWrapper");
 x.setAttribute("srcdoc", '<video style="height:550px;" data-config='+ JSON.stringify(config) +' id="my-player"></video><script src="JS/1.0.0.js"><\/script>');
 document.getElementById('videoContainer').appendChild(x);
